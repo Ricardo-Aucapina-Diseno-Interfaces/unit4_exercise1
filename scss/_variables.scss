@@ -1,0 +1,4 @@
+@use "sass:math";
+$color: random(360);
+
+$base-color:hsl($color, percentage(random()), percentage(random());
