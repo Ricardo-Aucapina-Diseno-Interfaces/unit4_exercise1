@@ -4,5 +4,5 @@
 
 ## Compilar Sass
 
-`sass main.scss:./dist/css/main.css`
+`sass --watch scss/main.scss dist/css/main.css`
 

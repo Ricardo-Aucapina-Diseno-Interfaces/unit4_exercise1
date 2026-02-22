@@ -1,4 +1,7 @@
 @use "sass:math";
-$color: random(360);
 
-$base-color:hsl($color, percentage(random()), percentage(random());
+$matiz: math.random(360);
+$saturacion: math.percentage(math.random());
+$luminosidad: math.percentage(math.random());
+
+$base-color:hsl($matiz, $saturacion, $luminosidad);
