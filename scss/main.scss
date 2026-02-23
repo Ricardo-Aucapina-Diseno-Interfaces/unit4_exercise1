@@ -1,2 +1,47 @@
-@use "variables";
-@use "./contenedores";
+@use "variables" as v;
+
+body{
+    background-color: v.$fondo;
+    color: v.$texto;
+}
+
+div{
+    height: 5rem;
+    width: 8rem;
+    border: 0.15rem solid;
+    margin: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.base-color{
+    background-color: v.$base-color;
+}
+
+.light-color{
+    background-color: v.$claro;
+}
+
+.dark-color{
+    background-color: v.$oscuro;
+}
+
+.complementary-color{
+    background-color: v.$complementario;
+}
+
+.success-color{
+    background-color: v.$exito;
+}
+
+.error-color{
+    background-color: v.$error;
+}
+
+.text-color{
+    background-color: v.$texto;
+}
+
+.background-color{
+    background-color: v.$fondo;
+}
+

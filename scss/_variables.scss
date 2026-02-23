@@ -1,7 +1,23 @@
 @use "sass:math";
+@use "sass:color";
 
 $matiz: math.random(360);
 $saturacion: math.percentage(math.random());
 $luminosidad: math.percentage(math.random());
 
-$base-color:hsl($matiz, $saturacion, $luminosidad);
+
+$base-color: hsl($matiz, $saturacion, $luminosidad);
+
+$claro: color.scale($base-color, $lightness: 30%);
+
+$oscuro: color.scale($base-color, $lightness: -30%);
+
+$complementario: color.adjust($base-color, $hue: 180deg);
+
+$exito: color.mix(green, $base-color, 40%);
+
+$error: color.mix(red, $base-color, 40%);
+
+$texto: color.mix(black, $base-color, 85%);
+
+$fondo: color.mix(white, $base-color, 85%);
