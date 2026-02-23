@@ -1,8 +1,13 @@
 @use "variables" as v;
+@use "sass:color";
 
 body{
     background-color: v.$fondo;
     color: v.$texto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 5rem;
 }
 
 div{
@@ -45,3 +50,35 @@ div{
     background-color: v.$fondo;
 }
 
+// Modo oscuro
+
+@media(prefers-color-scheme: dark){
+    body{
+        background-color: color.invert(v.$fondo);
+        color: color.invert(v.$texto);
+    }
+    .base-color{
+        background-color: color.invert(v.$base-color);
+    }
+    .light-color{
+        background-color: color.invert(v.$claro);
+    }
+    .dark-color{
+        background-color: color.invert(v.$oscuro);
+    }
+    .complementary-color{
+        background-color: color.invert(v.$complementario);
+    }
+    .success-color{
+        background-color: color.invert(v.$exito);
+    }
+    .error-color{
+        background-color: color.invert(v.$error);
+    }
+    .text-color{
+        background-color: color.invert(v.$texto);
+    }
+    .background-color{
+        background-color: color.invert(v.$fondo);
+    }
+}
